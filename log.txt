@@ -1,0 +1,80 @@
+--- Log Start ---
+
+--- Starting Main Process ---
+
+[Phase 1] Loading dataset from 'food_predictions.csv'...
+
+[Phase 2] Vectorizing dataset...
+[INFO] Dataset length: 10020
+
+[Phase 3] Check vectorized data
+  Features: <Compressed Sparse Row sparse matrix of dtype 'float64'
+	with 13 stored elements and shape (1, 2214)>
+  Coords	Values
+  (0, 486)	0.18906573466080354
+  (0, 1692)	0.36280099125122656
+  (0, 656)	0.34251137829537215
+  (0, 499)	0.18004423698562447
+  (0, 103)	0.2591121087630078
+  (0, 52)	0.10731739598299057
+  (0, 2003)	0.25985567632738704
+  (0, 106)	0.49475648317838145
+  (0, 2162)	0.10547004900525823
+  (0, 1742)	0.2961612146933974
+  (0, 1338)	0.1997704180635649
+  (0, 798)	0.22337156390945978
+  (0, 1875)	0.3213970858820761
+  Target: 1
+
+[Phase 4a] Splitting data into training and testing sets...
+  Training Features shape: (8016, 2214)
+  Training Targets shape: (8016,)
+  Testing Features shape: (2004, 2214)
+  Testing Targets shape: (2004,)
+
+[Phase 4b] Scaling features for kNN...
+
+[Phase 5a] Hyperparameter tuning for Random Forest...
+Best Random Forest parameters: {'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 50}
+
+[Phase 5b] Hyperparameter tuning for K-Nearest Neighbors...
+Best kNN parameters: {'metric': 'euclidean', 'n_neighbors': 9, 'weights': 'distance'}
+
+[Phase 6a] Running prediction on Random Forest...
+
+[Phase 6b] Running prediction on K-Nearest Neighbors...
+
+[Phase 7a] Evaluate performance of Random Forest...
+Random Forest Accuracy: 0.7455089820359282
+              precision    recall  f1-score   support
+
+           0       0.67      0.42      0.52       649
+           1       0.76      0.90      0.83      1355
+
+    accuracy                           0.75      2004
+   macro avg       0.72      0.66      0.67      2004
+weighted avg       0.73      0.75      0.73      2004
+
+
+[Phase 7b] Evaluate performance of K-Nearest Neighbors...
+K-Nearest Neighbor Accuracy: 0.6951097804391217
+              precision    recall  f1-score   support
+
+           0       0.54      0.40      0.46       649
+           1       0.75      0.83      0.79      1355
+
+    accuracy                           0.70      2004
+   macro avg       0.64      0.62      0.62      2004
+weighted avg       0.68      0.70      0.68      2004
+
+
+--- Starting Main Process ---
+
+[Phase 1] Loading dataset from 'food_predictions.csv'...
+[INFO] Loaded 10020 samples from food_predictions.csv.
+[INFO] Dataset length: 10020
+
+[Phase 2] Initializing and training tokenizer...
+[INFO] Trained BPE tokenizer. Vocab size: 5817
+  Tokenizer vocabulary size: 5817
+[INFO] Tokenizer set for the dataset.
